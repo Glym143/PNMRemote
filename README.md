@@ -9,7 +9,6 @@ Release notes describe the supported platforms and installation method for each 
 ## Updates
 
 Compatible app versions check the signed update feed and verify downloaded files before installation.
-iPhone and iPad IPA files intended for independent signing must be installed using your signing tool.
 
 ## Repository contents
 
