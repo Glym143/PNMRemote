@@ -9,6 +9,7 @@
   <a href="https://github.com/Glym143/PNMRemote/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/Glym143/PNMRemote?style=flat-square&amp;label=latest&amp;color=8ab4f8"></a>
   <img alt="macOS 14 or later" src="https://img.shields.io/badge/macOS-14%2B-283142?style=flat-square">
   <img alt="Android 8 or later" src="https://img.shields.io/badge/Android-8%2B-283142?style=flat-square">
+  <img alt="Ubuntu 24.04 x86_64" src="https://img.shields.io/badge/Linux-Ubuntu%2024.04%20x86__64-283142?style=flat-square">
   <img alt="Proprietary software" src="https://img.shields.io/badge/software-proprietary-283142?style=flat-square">
 </p>
 
@@ -51,10 +52,28 @@ Available tools depend on the connected device and the services it is sharing. T
 | :--- | :--- | :--- | :--- |
 | **macOS** | Apple Silicon · macOS 14 or later | `.dmg` | Open the image and drag PNMRemote to Applications. |
 | **Android** | Android 8 or later · ARM64 or x86_64 | `.apk` | Open the APK and confirm installation. Install over your existing app to retain its data. |
+| **Linux** | Ubuntu 24.04 · x86_64 · desktop runtime libraries | Portable `.tar.gz` | Extract the complete archive into a folder you own, then run `pnmremote`. See below. |
 
 The current Mac download uses an Apple Development signature and is not notarized. See the release notes for distribution details.
 
-iPhone and iPad installation is distributed separately; this repository does not publish IPA files. Linux and Windows packages are not included in the current public release.
+iPhone and iPad installation is distributed separately; this repository does not publish IPA files. A Windows package is not included in the current public release.
+
+### Linux installation
+
+Download **`PNMRemote-1.0.199-linux-x86_64.tar.gz`** from the latest release for your first installation. From the folder containing the download, extract and run it as your normal user:
+
+```bash
+install -d -m 700 "$HOME/.local/opt/pnmremote"
+tar -xzf PNMRemote-1.0.199-linux-x86_64.tar.gz \
+    --strip-components=1 -C "$HOME/.local/opt/pnmremote"
+"$HOME/.local/opt/pnmremote/pnmremote"
+```
+
+Keep the `assets` folder beside the executable. The archive also includes `pnmremote-cli`, a Linux guide, an input setup helper and third-party license notices. The separate Linux executable in the release is the in-app update download; use the full archive to install the application and its supporting files.
+
+This package uses Ubuntu's desktop libraries; it does not bundle a complete Linux runtime. Use Ubuntu 24.04 x86_64 and install the runtime packages listed in the release notes. Compatibility with other distributions has not been established.
+
+To share the Linux screen, a running desktop session with PipeWire, a matching `xdg-desktop-portal` backend and a working H.264 hardware encoder through VA-API or NVENC are required. Screen hosting has no software encoder fallback; viewing another computer can use CPU decoding. Remote keyboard and pointer control additionally require `/dev/uinput` access; the archive includes a setup helper. Terminal and file sharing can be used without screen capture.
 
 ## Get connected
 
@@ -70,6 +89,8 @@ For access over the internet, enable internet connections on the sharing compute
 Open **Settings → Updates → Check for updates**. macOS also offers **Check for Updates…** in the PNMRemote application menu.
 
 Automatic checks normally run once per day when enabled. Downloads are verified before installation, and you decide when to install. An update check does not restart your session.
+
+On Linux, open **Settings → Updates → Check for Updates**, then choose **Download Update → Install & Restart**. Installation closes active remote sessions and retains the previous executable as a backup. In-app installation requires the application and its directory to be owned and writable only by your user. For an installation in a system-owned directory, update manually; use the package manager for package-managed installations. The portable updater replaces the GUI executable; download the full archive when you need to refresh the CLI or supporting assets as well.
 
 Versions use **major.minor.build**: for example, `1.0.199` is build 199, followed by `1.0.200`. Older releases remain in the [release archive](https://github.com/Glym143/PNMRemote/releases).
 
