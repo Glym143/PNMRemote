@@ -58,13 +58,44 @@ The current Mac download uses an Apple Development signature and is not notarize
 
 iPhone and iPad installation is distributed separately; this repository does not publish IPA files. A Windows package is not included in the current public release.
 
+### macOS installation
+
+Requires **Apple Silicon and macOS 14 or later**.
+
+1. Download the **macOS `.dmg`** from the release assets.
+2. Open the DMG and drag **PNMRemote** into **Applications**. When updating manually, quit the running app first and replace the existing copy.
+3. Launch **PNMRemote** from Applications or Spotlight, then eject the DMG.
+
+#### First launch
+
+The current build has an **Apple Development signature** and is **not notarized**. macOS may block the first launch.
+
+After trying to open PNMRemote, go to **System Settings → Privacy & Security**, find the message about PNMRemote, choose **Open Anyway**, and confirm **Open**. See [Apple's first-launch instructions](https://support.apple.com/en-us/102445).
+
+If it is still blocked by download quarantine, and you obtained this build from this repository and trust it, run the following in **Terminal** after copying the app to Applications:
+
+```bash
+xattr -dr com.apple.quarantine "/Applications/PNMRemote.app"
+```
+
+Then open PNMRemote again. This command removes the quarantine attribute only from this app; it does not disable Gatekeeper for your Mac.
+
+#### Enable sharing
+
+In **PNMRemote → Settings → Access → System permissions**, open the corresponding macOS settings and allow:
+
+- **Screen & System Audio Recording** to share this Mac's screen and audio.
+- **Accessibility** to control this Mac's keyboard and pointer remotely.
+
+Allow **Local Network** if macOS asks, so devices on the same network can connect. Quit and reopen PNMRemote after granting screen-recording access, then start sharing in **This Mac**. These host permissions are for sharing this Mac; they are not needed merely to view another computer.
+
 ### Linux installation
 
-Download **`PNMRemote-1.0.199-linux-x86_64.tar.gz`** from the latest release for your first installation. From the folder containing the download, extract and run it as your normal user:
+Download **`PNMRemote-1.0.205-linux-x86_64.tar.gz`** from the latest release for your first installation. From the folder containing the download, extract and run it as your normal user:
 
 ```bash
 install -d -m 700 "$HOME/.local/opt/pnmremote"
-tar -xzf PNMRemote-1.0.199-linux-x86_64.tar.gz \
+tar -xzf PNMRemote-1.0.205-linux-x86_64.tar.gz \
     --strip-components=1 -C "$HOME/.local/opt/pnmremote"
 "$HOME/.local/opt/pnmremote/pnmremote"
 ```
