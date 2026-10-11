@@ -117,7 +117,7 @@ For access over the internet, enable internet connections on the sharing compute
 
 ## Stay up to date
 
-Open **Settings → Updates → Check for updates**. macOS also offers **Check for Updates…** in the PNMRemote application menu.
+On **macOS**, open **Settings → General → Updates**, or choose **Check for Updates…** from the PNMRemote application menu. On **Android and Linux**, open **Settings → Updates → Check for Updates**.
 
 Automatic checks normally run once per day when enabled. Downloads are verified before installation, and you decide when to install. An update check does not restart your session.
 
