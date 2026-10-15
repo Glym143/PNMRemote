@@ -52,9 +52,9 @@ Available tools depend on the connected device and the services it is sharing. T
 | :--- | :--- | :--- | :--- |
 | **macOS** | Apple Silicon · macOS 14 or later | [1.0.217 · `.dmg`](https://github.com/Glym143/PNMRemote/releases/download/v1.0.217/pnmremote-1.0.217-macos-arm64-PNMRemote.dmg) | Open the image and drag PNMRemote to Applications. |
 | **Android** | Android 8 or later · ARM64 or x86_64 | [1.0.216 · `.apk`](https://github.com/Glym143/PNMRemote/releases/download/v1.0.217/pnmremote-1.0.216-android-universal-PNMRemote.apk) | Open the APK and confirm installation. Install over your existing app to retain its data. |
-| **Linux** | Ubuntu 24.04 · x86_64 · desktop runtime libraries | [1.0.212 · `.tar.gz`](https://github.com/Glym143/PNMRemote/releases/download/v1.0.212/PNMRemote-1.0.212-linux-x86_64.tar.gz) | Extract the complete archive into a folder you own, then run `pnmremote`. See below. |
+| **Linux** | Ubuntu 24.04 · x86_64 · desktop runtime libraries | [1.0.218 · `.tar.gz`](https://github.com/Glym143/PNMRemote/releases/download/v1.0.218/PNMRemote-1.0.218-linux-x86_64.tar.gz) | Extract the complete archive into a folder you own, then run `pnmremote`. See below. |
 
-Platform releases can advance independently. The current builds are **macOS 1.0.217**, **Android 1.0.216** and **Linux 1.0.212**. In-app updates select the build for your platform.
+Platform releases can advance independently. The current builds are **macOS 1.0.217**, **Android 1.0.216** and **Linux 1.0.218**. In-app updates select the build for your platform.
 
 The current Mac download uses an Apple Development signature and is not notarized. See the release notes for distribution details.
 
@@ -93,11 +93,11 @@ Allow **Local Network** if macOS asks, so devices on the same network can connec
 
 ### Linux installation
 
-Download [**`PNMRemote-1.0.212-linux-x86_64.tar.gz`**](https://github.com/Glym143/PNMRemote/releases/download/v1.0.212/PNMRemote-1.0.212-linux-x86_64.tar.gz) for your first installation. From the folder containing the download, extract and run it as your normal user:
+Download [**`PNMRemote-1.0.218-linux-x86_64.tar.gz`**](https://github.com/Glym143/PNMRemote/releases/download/v1.0.218/PNMRemote-1.0.218-linux-x86_64.tar.gz) for your first installation. From the folder containing the download, extract and run it as your normal user:
 
 ```bash
 install -d -m 700 "$HOME/.local/opt/pnmremote"
-tar -xzf PNMRemote-1.0.212-linux-x86_64.tar.gz \
+tar -xzf PNMRemote-1.0.218-linux-x86_64.tar.gz \
     --strip-components=1 -C "$HOME/.local/opt/pnmremote"
 "$HOME/.local/opt/pnmremote/pnmremote"
 ```
