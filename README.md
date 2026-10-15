@@ -50,11 +50,11 @@ Available tools depend on the connected device and the services it is sharing. T
 
 | Platform | Requirements | Package | Installation |
 | :--- | :--- | :--- | :--- |
-| **macOS** | Apple Silicon · macOS 14 or later | [1.0.212 · `.dmg`](https://github.com/Glym143/PNMRemote/releases/download/v1.0.212/pnmremote-1.0.212-macos-arm64-PNMRemote.dmg) | Open the image and drag PNMRemote to Applications. |
-| **Android** | Android 8 or later · ARM64 or x86_64 | [1.0.214 · `.apk`](https://github.com/Glym143/PNMRemote/releases/download/v1.0.214/pnmremote-1.0.214-android-universal-PNMRemote.apk) | Open the APK and confirm installation. Install over your existing app to retain its data. |
+| **macOS** | Apple Silicon · macOS 14 or later | [1.0.217 · `.dmg`](https://github.com/Glym143/PNMRemote/releases/download/v1.0.217/pnmremote-1.0.217-macos-arm64-PNMRemote.dmg) | Open the image and drag PNMRemote to Applications. |
+| **Android** | Android 8 or later · ARM64 or x86_64 | [1.0.216 · `.apk`](https://github.com/Glym143/PNMRemote/releases/download/v1.0.217/pnmremote-1.0.216-android-universal-PNMRemote.apk) | Open the APK and confirm installation. Install over your existing app to retain its data. |
 | **Linux** | Ubuntu 24.04 · x86_64 · desktop runtime libraries | [1.0.212 · `.tar.gz`](https://github.com/Glym143/PNMRemote/releases/download/v1.0.212/PNMRemote-1.0.212-linux-x86_64.tar.gz) | Extract the complete archive into a folder you own, then run `pnmremote`. See below. |
 
-Platform releases can advance independently. The latest Android build is **1.0.214**; the current macOS and Linux builds remain **1.0.212**. In-app updates select the build for your platform.
+Platform releases can advance independently. The current builds are **macOS 1.0.217**, **Android 1.0.216** and **Linux 1.0.212**. In-app updates select the build for your platform.
 
 The current Mac download uses an Apple Development signature and is not notarized. See the release notes for distribution details.
 
@@ -64,7 +64,7 @@ iPhone and iPad installation is distributed separately; this repository does not
 
 Requires **Apple Silicon and macOS 14 or later**.
 
-1. Download the [**macOS 1.0.212 `.dmg`**](https://github.com/Glym143/PNMRemote/releases/download/v1.0.212/pnmremote-1.0.212-macos-arm64-PNMRemote.dmg).
+1. Download the [**macOS 1.0.217 `.dmg`**](https://github.com/Glym143/PNMRemote/releases/download/v1.0.217/pnmremote-1.0.217-macos-arm64-PNMRemote.dmg).
 2. Open the DMG and drag **PNMRemote** into **Applications**. When updating manually, quit the running app first and replace the existing copy.
 3. Launch **PNMRemote** from Applications or Spotlight, then eject the DMG.
 
@@ -123,7 +123,9 @@ Screen sharing requires **Android 10 or later**. The Android viewer app supports
 
 On the Android phone, open **Settings → Share this phone → Start screen sharing** and approve Android’s capture prompt. Enable internet sharing before starting if you want to create a connection code. Add that code on the viewing device.
 
-Android screen sharing is currently **view-only**: another device can see the phone’s screen, but cannot send taps, swipes or keyboard input to it. Sharing can be stopped from the phone at any time.
+To let a trusted device control the phone, enable **Allow remote control**, then enable the **PNMRemote** accessibility service in Android settings. Share the **entire screen** when Android asks. Connected viewers can send taps, swipes, scrolling and supported keyboard input. Turn off **Allow remote control** to keep sharing in view-only mode.
+
+Screen sharing must be started manually on the phone. Connecting from another device does not display a capture-consent request on Android. Android can hide protected screens and sensitive content; locking the phone stops screen sharing on supported Android versions. Start sharing again after unlocking when needed. You can stop sharing from the phone at any time.
 
 ## Stay up to date
 
