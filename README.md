@@ -91,11 +91,11 @@ Allow **Local Network** if macOS asks, so devices on the same network can connec
 
 ### Linux installation
 
-Download **`PNMRemote-1.0.205-linux-x86_64.tar.gz`** from the latest release for your first installation. From the folder containing the download, extract and run it as your normal user:
+Download **`PNMRemote-1.0.212-linux-x86_64.tar.gz`** from the latest release for your first installation. From the folder containing the download, extract and run it as your normal user:
 
 ```bash
 install -d -m 700 "$HOME/.local/opt/pnmremote"
-tar -xzf PNMRemote-1.0.205-linux-x86_64.tar.gz \
+tar -xzf PNMRemote-1.0.212-linux-x86_64.tar.gz \
     --strip-components=1 -C "$HOME/.local/opt/pnmremote"
 "$HOME/.local/opt/pnmremote/pnmremote"
 ```
