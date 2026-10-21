@@ -50,11 +50,11 @@ Available tools depend on the connected device and the services it is sharing. T
 
 | Platform | Requirements | Package | Installation |
 | :--- | :--- | :--- | :--- |
-| **macOS** | Apple Silicon · macOS 14 or later | [1.0.221 · `.dmg`](https://github.com/Glym143/PNMRemote/releases/download/v1.0.221/pnmremote-1.0.221-macos-arm64-PNMRemote.dmg) | Open the image and drag PNMRemote to Applications. |
-| **Android** | Android 8 or later · ARM64 or x86_64 | [1.0.216 · `.apk`](https://github.com/Glym143/PNMRemote/releases/download/v1.0.217/pnmremote-1.0.216-android-universal-PNMRemote.apk) | Open the APK and confirm installation. Install over your existing app to retain its data. |
-| **Linux** | Ubuntu 24.04 · x86_64 · desktop runtime libraries | [1.0.218 · `.tar.gz`](https://github.com/Glym143/PNMRemote/releases/download/v1.0.218/PNMRemote-1.0.218-linux-x86_64.tar.gz) | Extract the complete archive into a folder you own, then run `pnmremote`. See below. |
+| **macOS** | Apple Silicon · macOS 14 or later | [1.0.222 · `.dmg`](https://github.com/Glym143/PNMRemote/releases/download/v1.0.222/pnmremote-1.0.222-macos-arm64-PNMRemote.dmg) | Open the image and drag PNMRemote to Applications. |
+| **Android** | Android 8 or later · ARM64 or x86_64 | [1.0.222 · `.apk`](https://github.com/Glym143/PNMRemote/releases/download/v1.0.222/pnmremote-1.0.222-android-universal-PNMRemote.apk) | Open the APK and confirm installation. Install over your existing app to retain its data. |
+| **Linux** | Ubuntu 24.04 · x86_64 · desktop runtime libraries | [1.0.222 · `.tar.gz`](https://github.com/Glym143/PNMRemote/releases/download/v1.0.222/PNMRemote-1.0.222-linux-x86_64.tar.gz) | Extract the complete archive into a folder you own, then run `pnmremote`. See below. |
 
-Platform releases can advance independently. The current builds are **macOS 1.0.221**, **Android 1.0.216** and **Linux 1.0.218**. In-app updates select the build for your platform.
+Platform releases can advance independently. The current builds are **macOS 1.0.222**, **Android 1.0.222** and **Linux 1.0.222**. In-app updates select the build for your platform.
 
 The current Mac download uses an Apple Development signature and is not notarized. See the release notes for distribution details.
 
@@ -64,7 +64,7 @@ iPhone and iPad installation is distributed separately; this repository does not
 
 Requires **Apple Silicon and macOS 14 or later**.
 
-1. Download the [**macOS 1.0.221 `.dmg`**](https://github.com/Glym143/PNMRemote/releases/download/v1.0.221/pnmremote-1.0.221-macos-arm64-PNMRemote.dmg).
+1. Download the [**macOS 1.0.222 `.dmg`**](https://github.com/Glym143/PNMRemote/releases/download/v1.0.222/pnmremote-1.0.222-macos-arm64-PNMRemote.dmg).
 2. Open the DMG and drag **PNMRemote** into **Applications**. When updating manually, quit the running app first and replace the existing copy.
 3. Launch **PNMRemote** from Applications or Spotlight, then eject the DMG.
 
@@ -93,11 +93,11 @@ Allow **Local Network** if macOS asks, so devices on the same network can connec
 
 ### Linux installation
 
-Download [**`PNMRemote-1.0.218-linux-x86_64.tar.gz`**](https://github.com/Glym143/PNMRemote/releases/download/v1.0.218/PNMRemote-1.0.218-linux-x86_64.tar.gz) for your first installation. From the folder containing the download, extract and run it as your normal user:
+Download [**`PNMRemote-1.0.222-linux-x86_64.tar.gz`**](https://github.com/Glym143/PNMRemote/releases/download/v1.0.222/PNMRemote-1.0.222-linux-x86_64.tar.gz) for your first installation. From the folder containing the download, extract and run it as your normal user:
 
 ```bash
 install -d -m 700 "$HOME/.local/opt/pnmremote"
-tar -xzf PNMRemote-1.0.218-linux-x86_64.tar.gz \
+tar -xzf PNMRemote-1.0.222-linux-x86_64.tar.gz \
     --strip-components=1 -C "$HOME/.local/opt/pnmremote"
 "$HOME/.local/opt/pnmremote/pnmremote"
 ```
