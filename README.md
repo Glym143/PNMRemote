@@ -51,10 +51,10 @@ Available tools depend on the connected device and the services it is sharing. T
 | Platform | Requirements | Package | Installation |
 | :--- | :--- | :--- | :--- |
 | **macOS** | Apple Silicon · macOS 14 or later | [1.0.223 · `.dmg`](https://github.com/Glym143/PNMRemote/releases/download/v1.0.223/pnmremote-1.0.223-macos-arm64-PNMRemote.dmg) | Open the image and drag PNMRemote to Applications. |
-| **Android** | Android 8 or later · ARM64 or x86_64 | [1.0.223 · `.apk`](https://github.com/Glym143/PNMRemote/releases/download/v1.0.223/pnmremote-1.0.223-android-universal-PNMRemote.apk) | Open the APK and confirm installation. Install over your existing app to retain its data. |
+| **Android** | Android 8 or later · ARM64 or x86_64 | [1.0.224 · `.apk`](https://github.com/Glym143/PNMRemote/releases/download/v1.0.224/pnmremote-1.0.224-android-universal-PNMRemote.apk) | Open the APK and confirm installation. Install over your existing app to retain its data. |
 | **Linux** | Ubuntu 24.04 · x86_64 · desktop runtime libraries | [1.0.223 · `.tar.gz`](https://github.com/Glym143/PNMRemote/releases/download/v1.0.223/PNMRemote-1.0.223-linux-x86_64.tar.gz) | Extract the complete archive into a folder you own, then run `pnmremote`. See below. |
 
-Platform releases can advance independently. The current builds are **macOS 1.0.223**, **Android 1.0.223** and **Linux 1.0.223**. In-app updates select the build for your platform.
+Platform releases can advance independently. The current builds are **macOS 1.0.223**, **Android 1.0.224** and **Linux 1.0.223**. In-app updates select the build for your platform.
 
 The current Mac download uses an Apple Development signature and is not notarized. See the release notes for distribution details.
 
@@ -102,7 +102,7 @@ tar -xzf PNMRemote-1.0.223-linux-x86_64.tar.gz \
 "$HOME/.local/opt/pnmremote/pnmremote"
 ```
 
-Keep the `assets` folder beside the executable. The archive also includes `pnmremote-cli`, a Linux guide, an input setup helper and third-party license notices. The separate Linux executable in the release is the in-app update download; use the full archive to install the application and its supporting files.
+Keep the `assets` folder beside the executable. The archive also includes `pnmremote-cli`, a Linux guide, an input setup helper and third-party license notices. The separate Linux executable in the [1.0.223 release](https://github.com/Glym143/PNMRemote/releases/tag/v1.0.223) is the in-app update download; use the full archive to install the application and its supporting files.
 
 This package uses Ubuntu's desktop libraries; it does not bundle a complete Linux runtime. Use Ubuntu 24.04 x86_64 and install the runtime packages listed in the release notes. Compatibility with other distributions has not been established.
 
